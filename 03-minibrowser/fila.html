@@ -1,0 +1,54 @@
+
+<script>
+//FIFO
+    console.log('[Fila/Queue]');
+
+    var fila = [
+
+        'scripts.js',
+        'style.css',
+        'imagem.png', 
+    ];
+    //Adiciona na fila um último item    
+    fila.push('dog.png')
+
+    //Remove o primeiro item
+    fila.shift();
+
+    // ==========================
+    // Receita para criar filas 
+    // ==========================
+    // - enqueue = enfileirar
+    // - dequeue = desinfileirar
+    // - Class: Receita para criar objetos
+
+    class Queue {
+        constructor()
+        {
+            this.data = [];
+        }
+        print(){
+            console.log(this.data);
+        }
+        enqueue(item){
+            this.data.push(item)
+
+        }
+        dequeue(){
+            this.data.shift();
+        }
+    }
+
+    // Design do código First
+    var requests = new Queue();
+    // Open Closed
+    // Open de aberto para enxtensão
+    // Closed de dechado para modificação
+    requests.enqueue('scripts.js');
+    requests.print();
+    requests.dequeue('scripts.js');
+    requests.enqueue('style.css');
+    requests.enqueue('imagem.png');
+    requests.enqueue('dog.png');
+    requests.print();
+</script>
