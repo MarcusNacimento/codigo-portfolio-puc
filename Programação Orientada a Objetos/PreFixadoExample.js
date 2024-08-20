@@ -23,7 +23,10 @@ class Estudante extends Pessoa {
         super.ola();
         return 'olá do aluno';
     }
+    getMatricula(){ // método para pegar a matricula que está privada
+        return 'Sua matricula é: '+ this.#matricula;
+    }
 };
 
 const estudante1 = new Estudante('Jorge', 2000, 'Estudante', 15236)
-console.log(estudante1);
+console.log(estudante1.getMatricula());
