@@ -24,9 +24,12 @@ class Estudante extends Pessoa {
         return 'olá do aluno';
     }
     getMatricula(){ // método para pegar a matricula que está privada
-        return 'Sua matricula é: '+ this.#matricula;
+        return  this.#matricula;
     }
 };
 
-const estudante1 = new Estudante('Jorge', 2000, 'Estudante', 15236)
-console.log(estudante1.getMatricula());
+const estudante1 = new Estudante('Jorge', 2000, 'Estudante', {numero: 1212121, modalidade : 'Regular'})
+let pegamatricula = estudante1.getMatricula();
+pegamatricula.modalidade = 'nova'; //a privação somente é na hora da visualização
+console.log(pegamatricula);
+console.log(estudante1);
