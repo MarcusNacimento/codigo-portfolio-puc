@@ -9,7 +9,7 @@ console.log("-=========-")
 
 for (let val in a){
     console.log("=>" + val)
-    console.log("-=-=-=-=-=-\n")
+    console.log("-=-=-=-=-=-\n") // Lista somente valores armazenados
 }
 
 console.log(" -for with in- ")
@@ -17,11 +17,11 @@ console.log("-=========-")
 
 for (let val of a){
     console.log("=>" + val)
-    console.log("-=-=-=-=-=-\n")
+    console.log("-=-=-=-=-=-\n") // Lista todos os valores dentro do loop, mesmo valores indefinidos
 }
 
 console.log(" -for with (;;))- ")
 console.log("-=========-")
 for(let i=0;i<a.length;i++){
-    console.log(" -->"+i+": "+a[i] )
+    console.log(" -->"+i+": "+a[i] ) // Definindo valores no loop, ele lista igualmente indefinidos
 }

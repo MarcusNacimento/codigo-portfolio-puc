@@ -12,5 +12,6 @@ function decision(question, doOK, doCancel){
         console.log("You canceled this execution");
     }
 
-    decision("OK",showOk, showCancel);
-    decision("Cancel", showOk,showCancel);
+    decision("OK", showOk, showCancel);
+
+    decision("Cancel", showOk, showCancel);
